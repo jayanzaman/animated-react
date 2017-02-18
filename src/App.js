@@ -5,6 +5,7 @@ injectTapEventPlugin();
 import './App.css';
 import SearchBox from './SearchBox'
 import makeExpanding from './expanding-animation';
+import AppBar from './AppBar';
 
 const ExpandingSearchBox = makeExpanding(SearchBox);
 
@@ -20,8 +21,12 @@ class App extends Component {
 
     return (
         <MuiThemeProvider>
-          <div style={style}>
+          <div >
+           <AppBar />
+            <div style={style}>
+
             <ExpandingSearchBox/>
+          </div>
           </div>
         </MuiThemeProvider>
     );
